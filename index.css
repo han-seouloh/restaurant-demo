@@ -1,0 +1,239 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+
+}
+
+:root {
+  font-size: 16px;
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+/*Nav Bar*/
+
+nav {
+  position: fixed;
+  top: 3vw;
+  width: 97.25%;
+  padding-right: 2vw;
+  height: fit-content;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 1;
+  transition: transform 0.75s;
+}
+
+nav img {
+  margin-left: 3vw;
+  max-width: 17.5vw;
+}
+
+nav ul {
+  display: flex;
+  height: fit-content;
+}
+
+nav a {
+  width: fit-content;
+  height: fit-content;
+  display: flex;
+  padding: 0.25vw 1vw;
+  list-style: none;
+  text-decoration: none;
+  color: white;
+  font-family: 'Sweet Sans Pro';
+  font-weight: bold;
+  font-size: 1vw;
+}
+
+a[href='#eventos'] {
+  color: black;
+  background-color: white;
+}
+
+nav a:hover {
+  color: #BB2E2A;
+}
+
+.hide-bar {
+  transform: translateY(-12.5vh);
+}
+
+/*City Menu Button*/
+.menu-button {
+  position: fixed;
+  top: 25vh;
+  right: 0;
+  display: flex;
+  align-items: center;
+  height: fit-content;
+  padding: 0.5vw 0.75vw;
+  border-top-left-radius: 0.5vw;
+  border-bottom-left-radius: 0.5vw;
+  writing-mode: vertical-rl;
+  background-color: rgba(255, 255, 255, 0.75);
+  font-family: 'Sweet Sans Pro';
+  font-weight: 500;
+  font-size: 1vw;
+  transition: transform 0.5s;
+}
+
+.menu-button p {
+  text-align: center;
+  height: 14vw;
+  margin-top: 1vw;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.menu-button:hover {
+  cursor: pointer;
+}
+
+/*Cities Menu*/
+
+#menu {
+  position: fixed;
+  top: 0;
+  right: -100vw;
+  width: 100vw;
+  height: 100vh;
+  z-index: 2;
+  display: flex;
+  transition: transform 0.5s;
+}
+
+.side-bar {
+  display: inline-flex;
+  flex-flow: column;
+  align-items: center;
+  background-color: black;
+  width: 30vw;
+  height: 100vh;
+  color: white;
+  font-family: 'Sweet Sans Pro';
+  font-weight: 500;
+  z-index: 3;
+}
+
+.side-bar > img {
+  max-width: 50%;
+  margin: 10% 20% 10% 0;
+}
+
+div.city-selectors {
+  width: 100%;
+}
+
+.city-selectors > p {
+  background-color: black;
+  font-size: 1.2vw;
+  width: 100%;
+  padding: 1% 0 1% 15%;
+  transition: padding 0.5s, margin 0.5s;
+}
+
+.city-selectors > p:hover {
+  background-color: #24292E;
+  cursor: pointer;
+}
+
+.city-selectors > p[data='1'] {
+  background-color: #24292E;
+  padding: 2.5% 0 2.5% 15%;
+  margin: 2% 0;
+  transition: padding 0.5s, margin 0.5s;
+}
+
+#icons-container {
+  display: flex;
+  align-items: flex-end;
+  width: 100%;
+  height: 72.5%;
+  padding: 2vw;
+}
+
+img.icon {
+  max-width: 1.5vw !important;
+  max-height: 1.5vw !important;
+  margin-right: 0.5vw;
+
+}
+
+.cities {
+  width: 70vw;
+  height: 100vw;
+  background-color: #24292E;
+}
+
+.cities i#close-button {
+  position: relative;
+  right: 0;
+}
+
+.cities div[data='0'] {
+  display: none;
+}
+
+.cities div[data='1'] {
+  display: flex;
+  justify-content: space-around;
+  padding: 7.5vw;
+  color: white;
+  font-family: 'Sweet Sans Pro';
+  width: 100%;
+  height: 100%;
+  animation: fadeIn 1s ease-in-out;
+}
+
+
+
+.show-menu {
+  transform: translateX(-100vw);
+}
+
+/*Main Body*/
+
+main {
+width: 100vw;
+}
+
+/*Input Form 1*/
+
+#inicio {
+  background: url('./images/Imagen\ Header.png') no-repeat center;
+  background-size: 100%;
+  width: 100%;
+  aspect-ratio: 381/214;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+form {
+  display: flex;
+}
+
+#inicio select {
+  background-color: rgba(255, 255, 255, 0.75);
+  height: 2.25vw;
+  font-size: 1vw;
+}
+
+/*Animations*/
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+};

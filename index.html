@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./index.css">
+  <link rel="stylesheet" href="./fonts/fonts.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <title>señora tanaka</title>
+</head>
+<body>
+  <header>
+    <nav>
+      <a href="#top"><img src="./images/Logo Señora Tanaka.png" alt="logo señora tanaka"></a>
+      <ul>
+        <a href="#inicio"><li>INICIO</li></a>
+        <a href="#nosotros"><li>NOSOTROS</li></a>
+        <a href="#galeria"><li>GALERIA</li></a>
+        <a href="#blog"><li>BLOG</li></a>
+        <a href="#bolsa"><li>BOLSA DE TRABAJO</li></a>
+        <a href="#eventos"><li>EVENTOS</li></a>
+      </ul>
+    </nav>
+  </header>
+  <main>
+    <section id="inicio">
+      <form>
+        <select name="branch" id="branch-selection">
+          <option value="" disabled selected>SUCURSAL</option>
+          <option value="1">SUCURSAL 1</option>
+          <option value="2">SUCURSAL 2</option>
+          <option value="3">SUCURSAL 3</option>
+        </select>
+        <select name="people" id="people-selection">
+          <option value="" disabled selected>CANT. PERSONAS</option>
+          <option value="1">1 PERSONA</option>
+          <option value="2">2 PERSONAS</option>
+          <option value="3">3 PERSONAS</option>
+        </select>
+        <select name="date" id="date-selection">
+          <option value="" disabled selected>FECHA</option>
+          <option value="1">1-ENE-2023</option>
+          <option value="2">1-FEB-2023</option>
+          <option value="3">1-MAR-2023</option>
+        </select>
+        <select name="time" id="time-selection">
+          <option value="" disabled selected>HORA</option>
+          <option value="1">1-ENE-2023</option>
+          <option value="2">1-FEB-2023</option>
+          <option value="3">1-MAR-2023</option>
+        </select>
+        <input type="submit" value="BUSCAR MESA">
+      </form>
+    </section>
+  </main>
+  <div class="menu-button">
+    <i class="fa-solid fa-chevron-left"></i>
+    <p>¿BUSCAS OTRA CIUDAD?</p>
+  </div>
+  <aside id="menu">
+    <div class="side-bar">
+      <img src="./images/Logo MG.png" alt="logo mandala group">
+      <div class="city-selectors">
+        <p data='0' key='1' >GUADALAJARA</p>
+        <p data='0' key='2' >CIUDAD DE MÉXICO</p>
+        <p data='0' key='3' >MONTERREY</p>
+        <p data='0' key='4' >PUERTO VALLARTA</p>
+        <p data='0' key='5' >CANCÚN</p>
+        <p data='0' key='6' >TULUM</p>
+        <p data='0' key='7' >PLAYA DEL CARMEN</p>
+        <p data='0' key='8' >PUEBLA</p>
+        <p data='0' key='9' >CABO SAN LUCAS</p>
+        <p data='0' key='10' >LEÓN</p>
+        <p data='0' key='11' >CULIACÁN</p>
+        <p data='0' key='12' >MÉRIDA</p>
+      </div>
+      <div id="icons-container">
+        <!--Add a tags for social media icons-->
+        <img class="icon" src="./images/Facebook-icon.png" alt="facebook icon">
+        <img class="icon" src="./images/Instagram-Icon.png" alt="instagram icon">
+        <!--Add a tags for social media icons-->
+      </div>
+    </div>
+    <div class="cities">
+      <i id='close-button' class="fa-regular fa-circle-xmark"></i>
+      <section class="city">
+        <div class="restaurants-container" data="0" key="1">
+          <div class="gastronomic">
+            <h2>GASTRONOMIC</h2>
+            <p>SEÑOR TANAKA</p>
+            <p>COLMILLO</p>
+            <p>PORFIRIO'S</p>
+            <p>CAMPOMAR</p>
+            <p>MANTELA</p>
+          </div>
+          <div class="daylife">
+            <h2>DAYLIFE</h2>
+            <p>GOOD TOYS</p>
+          </div>
+          <div class="nightlife">
+            <h2>NIGHTLIFE</h2>
+            <p>ABOLENGO</p>
+            <p>MARGOT</p>
+            <p>LA SANTA</p>
+            <p>VANGO</p>
+            <p>PRESTON</p>
+            <p>NADIM</p>
+            <p>DOROTHY</p>
+            <p>LOST & FOUND</p>
+            <p>PARADISSO</p>
+          </div>
+        </div>
+        <div class="restaurants-container" data="0" key="2">
+          <div class="gastronomic">
+            <h2>GASTRONOMIC</h2>
+            <p>SEÑORA TANAKA</p>
+            <p>COLMILLO</p>
+            <p>CAMPOMAR</p>
+            <p>CARNAL</p>
+            <p>ILIO'S</p>
+            <p>PORFIRIO'S</p>
+          </div>
+          <div class="daylife">
+            <h2>DAYLIFE</h2>
+          </div>
+          <div class="nightlife">
+            <h2>NIGHTLIFE</h2>
+            <p>LA SANTA</p>
+          </div>
+        </div>
+        <div class="restaurants-container" data="0" key="3">
+          <div class="gastronomic">
+            <h2>GASTRONOMIC</h2>
+            <p>COLMILLO</p>
+            <p>CAMPOMAR</p>
+            <p>VASCONCELOS</p>
+          </div>
+          <div class="daylife">
+            <h2>DAYLIFE</h2>
+          </div>
+          <div class="nightlife">
+            <h2>NIGHTLIFE</h2>
+            <p>TOTŌ</p>
+          </div>
+        </div>
+        <div class="restaurants-container" data="0" key="4">
+          <div class="gastronomic">
+            <h2>GASTRONOMIC</h2>
+            <p>PORFIRIO'S</p>
+            <p>LA VACA ARGENTINA</p>
+            <p>LA DOLCE VITA</p>
+            <p>CAMPOMAR</p>
+          </div>
+          <div class="daylife">
+            <h2>DAYLIFE</h2>
+          </div>
+          <div class="nightlife">
+            <h2>NIGHTLIFE</h2>
+            <p>MANDALA</p>
+          </div>
+        </div>
+        <div class="restaurants-container" data="0" key="5">
+          <div class="gastronomic">
+            <h2>GASTRONOMIC</h2>
+            <p>ILIO'S</p>
+            <p>PORFIRIO'S</p>
+            <p>HARRY'S</p>
+            <p>NICOLETTA</p>
+            <p>BAK</p>
+            <p>MACARIO</p>
+          </div>
+          <div class="daylife">
+            <h2>DAYLIFE</h2>
+            <p>MANDALA BEACH</p>
+          </div>
+          <div class="nightlife">
+            <h2>NIGHTLIFE</h2>
+            <p>THE CITY</p>
+            <p>MANDALA</p>
+            <p>D'CAVE</p>
+            <p>H'ROOF</p>
+          </div>
+        </div>
+        <div class="restaurants-container" data="0" key="6">
+          <div class="gastronomic">
+            <h2>GASTRONOMIC</h2>
+            <p>BAGATELLE</p>
+            <p>BAK</p>
+            <p>NICOLETTA</p>
+            <p>MACARIO</p>
+            <p>ILIO'S</p>
+          </div>
+          <div class="daylife">
+            <h2>DAYLIFE</h2>
+            <p>VAGALUME</p>
+          </div>
+          <div class="nightlife">
+            <h2>NIGHTLIFE</h2>
+            <p>BONBONNIERE</p>
+          </div>
+        </div>
+        <div class="restaurants-container" data="0" key="7">
+          <div class="gastronomic">
+            <h2>GASTRONOMIC</h2>
+            <p>PORFIRIO'S</p>
+            <p>HARRY'S</p>
+            <p>ILIO'S</p>
+          </div>
+          <div class="daylife">
+            <h2>DAYLIFE</h2>
+          </div>
+          <div class="nightlife">
+            <h2>NIGHTLIFE</h2>
+            <p>MANDALA</p>
+          </div>
+        </div>
+        <div class="restaurants-container" data="0" key="8">
+          <div class="gastronomic">
+            <h2>GASTRONOMIC</h2>
+            <p>PORFIRIO'S</p>
+            <p>CAMPOMAR</p>
+          </div>
+          <div class="daylife">
+            <h2>DAYLIFE</h2>
+          </div>
+          <div class="nightlife">
+            <h2>NIGHTLIFE</h2>
+          </div>
+        </div>
+        <div class="restaurants-container" data="0" key="9">
+          <div class="gastronomic">
+            <h2>GASTRONOMIC</h2>
+            <p>BAGATELLE</p>
+          </div>
+          <div class="daylife">
+            <h2>DAYLIFE</h2>
+          </div>
+          <div class="nightlife">
+            <h2>NIGHTLIFE</h2>
+            <p>MANDALA</p>
+          </div>
+        </div>
+        <div class="restaurants-container" data="0" key="10">
+          <div class="gastronomic">
+            <h2>GASTRONOMIC</h2>
+            <p>CAMPOMAR</p>
+          </div>
+          <div class="daylife">
+            <h2>DAYLIFE</h2>
+          </div>
+          <div class="nightlife">
+            <h2>NIGHTLIFE</h2>
+          </div>
+        </div>
+        <div class="restaurants-container" data="0" key="11">
+          <div class="gastronomic">
+            <h2>GASTRONOMIC</h2>
+            <p>PORFIRIO'S</p>
+          </div>
+          <div class="daylife">
+            <h2>DAYLIFE</h2>
+          </div>
+          <div class="nightlife">
+            <h2>NIGHTLIFE</h2>
+          </div>
+        </div>
+        <div class="restaurants-container" data="0" key="12">
+          <div class="gastronomic">
+            <h2>GASTRONOMIC</h2>
+            <p>PORFIRIO'S</p>
+          </div>
+          <div class="daylife">
+            <h2>DAYLIFE</h2>
+          </div>
+          <div class="nightlife">
+            <h2>NIGHTLIFE</h2>
+          </div>
+        </div>
+      </section>
+    </div>
+  </aside>
+  <footer></footer>
+  <script src="./index.js"></script>
+</body>
+</html>

@@ -1,0 +1,63 @@
+@font-face {
+    font-family: 'Sweet Sans Pro';
+    src: url('SweetSansPro-LightItalic.woff') format('woff'),
+        url('SweetSansPro-LightItalic.ttf') format('truetype');
+    font-weight: 300;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Sweet Sans Pro ExLight';
+    src: url('SweetSansPro-ExLightItalic.woff') format('woff'),
+        url('SweetSansPro-ExLightItalic.ttf') format('truetype');
+    font-weight: 200;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Sweet Sans Pro';
+    src: url('SweetSansPro-BoldItalic.woff') format('woff'),
+        url('SweetSansPro-BoldItalic.ttf') format('truetype');
+    font-weight: bold;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Sweet Sans Pro';
+    src: url('SweetSansPro-Bold.woff') format('woff'),
+        url('SweetSansPro-Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Sweet Sans Pro';
+    src: url('SweetSansPro-Medium.woff') format('woff'),
+        url('SweetSansPro-Medium.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Sweet Sans Pro';
+    src: url('SweetSansPro-Light.woff') format('woff'),
+        url('SweetSansPro-Light.ttf') format('truetype');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Sweet Sans Pro';
+    src: url('SweetSansPro-Regular.woff') format('woff'),
+        url('SweetSansPro-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
