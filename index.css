@@ -201,7 +201,7 @@ img.icon {
 .cities div[data='1'] {
   display: flex;
   justify-content: space-around;
-  padding: 7.5vw;
+  padding: 1vw 7.5vw;
   color: white;
   font-family: 'Sweet Sans Pro';
   width: 100%;
