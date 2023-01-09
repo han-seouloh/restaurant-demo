@@ -72,11 +72,11 @@ nav a:hover {
   display: flex;
   align-items: center;
   height: fit-content;
-  padding: 0.5vw 0.75vw;
+  padding: 0.75vw 0.75vw;
   border-top-left-radius: 0.5vw;
   border-bottom-left-radius: 0.5vw;
   writing-mode: vertical-rl;
-  background-color: rgba(255, 255, 255, 0.75);
+  background-color: rgba(255, 255, 255, 0.9);
   font-family: 'Sweet Sans Pro';
   font-weight: 500;
   font-size: 1vw;
@@ -86,7 +86,7 @@ nav a:hover {
 .menu-button p {
   text-align: center;
   height: 14vw;
-  margin-top: 1vw;
+  margin-top: 0.25vw;
   -webkit-user-select: none;
   -ms-user-select: none;
   user-select: none;
@@ -94,6 +94,10 @@ nav a:hover {
 
 .menu-button:hover {
   cursor: pointer;
+}
+
+.menu-button:hover i{
+  animation: sideToSide 1s ease-in-out infinite;
 }
 
 /*Cities Menu*/
@@ -172,6 +176,24 @@ img.icon {
   background-color: #24292E;
 }
 
+.cities div.close-button-container {
+  display: flex;
+  justify-content: end;
+  padding: 1.5vw 2.5vw;
+  width: 100%;
+}
+
+.cities i {
+  color: white;
+  font-size: 2vw;
+}
+
+.cities i:hover {
+  cursor: pointer;
+  transform: scale(1.1);
+  transition: transform 0.25s;
+}
+
 .cities div[data='0'] {
   display: none;
 }
@@ -245,4 +267,16 @@ form {
   100% {
     opacity: 1;
   }
-};
+}
+
+@keyframes sideToSide {
+  0% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(-25%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
