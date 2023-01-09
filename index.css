@@ -172,11 +172,6 @@ img.icon {
   background-color: #24292E;
 }
 
-.cities i#close-button {
-  position: relative;
-  right: 0;
-}
-
 .cities div[data='0'] {
   display: none;
 }
@@ -192,7 +187,21 @@ img.icon {
   animation: fadeIn 1s ease-in-out;
 }
 
+.cities div[data='1'] h2 {
+  font-weight: 500;
+  font-size: 1.5vw;
+  margin-bottom: 1.5vw;
+}
 
+.cities div[data='1'] p {
+  font-weight: lighter;
+  font-size: 1vw;
+}
+
+.cities div[data='1'] p:hover {
+  cursor: pointer;
+  color: #BB2E2A;
+}
 
 .show-menu {
   transform: translateX(-100vw);
