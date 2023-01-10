@@ -47,7 +47,7 @@ nav a {
   text-decoration: none;
   color: white;
   font-family: 'Sweet Sans Pro';
-  font-weight: bold;
+  font-weight: 500;
   font-size: 1vw;
 }
 
@@ -211,13 +211,13 @@ img.icon {
 
 .cities div[data='1'] h2 {
   font-weight: 500;
-  font-size: 1.5vw;
+  font-size: 1.1vw;
   margin-bottom: 1.5vw;
 }
 
 .cities div[data='1'] p {
   font-weight: lighter;
-  font-size: 1vw;
+  font-size: 0.9vw;
 }
 
 .cities div[data='1'] p:hover {
