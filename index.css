@@ -8,6 +8,7 @@
 :root {
   font-size: 16px;
   font-family: 'Sweet Sans Pro';
+  scroll-behavior: smooth;
 }
 
 ::-webkit-scrollbar {
@@ -236,7 +237,7 @@ main {
 width: 100vw;
 }
 
-/*Input Form 1*/
+/*Inicio (Dropdown Form)*/
 
 #inicio {
   background: url('./images/Imagen\ Header.png') no-repeat center;
@@ -343,6 +344,30 @@ width: 100vw;
   animation: slideIn 0.5s ease-in;
 }
 
+/*Nosotros*/
+
+#nosotros {
+  padding: 5vw 2vw;
+  display: inline-flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  color: white;
+  background-color: black;
+  text-align: justify;
+  text-align-last: center;
+}
+
+#nosotros h1 {
+  margin-bottom: 3vw;
+}
+
+#nosotros p {
+  width: 40%;
+  margin-bottom: 1vw;
+  font-weight: lighter;
+}
 
 /*Animations*/
 
