@@ -109,11 +109,15 @@ const aboutSection = document.getElementById('nosotros');
 
 const aboutObserver = new IntersectionObserver(entries => {
   entries.forEach(entry => {
-    [...entry.target.children].forEach(element => element.classList.toggle('show-about'));
+    if (entry.isIntersecting){
+      [...entry.target.children].forEach(element => element.classList.add('show-about'));
+    } else {
+      [...entry.target.children].forEach(element => element.classList.remove('show-about'));
+    };
   });
 },{
-  threshold: [0.33],
-  rootMargin: '-25%'
+  threshold: [0.3],
+  rootMargin: '-20%'
 });
 
 aboutObserver.observe(aboutSection);
