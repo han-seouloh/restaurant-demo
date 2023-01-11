@@ -37,21 +37,19 @@ const closeButton = document.getElementById('close-button');
 let menuVisibility = false;
 
 const onMenuButtonClick = () => {
+  menuButton.classList.toggle('show-menu');
+  citiesMenu.classList.toggle('show-menu');
   if (menuVisibility) {
     menuVisibility = false;
-    menuButton.classList.remove('show-menu');
-    citiesMenu.classList.remove('show-menu');
-    cities.map(city => {
+    cities.forEach(city => {
       city.removeEventListener('click', handleCityClick)
     });
   } else {
     menuVisibility = true;
-    menuButton.classList.add('show-menu');
-    citiesMenu.classList.add('show-menu');
-    cities.map(city => {
+    cities.forEach(city => {
       city.setAttribute('data', '0');
     });
-    cities.map(city => {
+    cities.forEach(city => {
       city.addEventListener('click', handleCityClick)
     });
   };
@@ -79,6 +77,28 @@ const handleCityClick = ({target}) => {
 
   targetMenu.setAttribute('data', '1');
 
-  filteredCities.map(city => city.setAttribute('data', '0'));
-  filteredMenus.map(menu => menu.setAttribute('data', '0'));
+  filteredCities.forEach(city => city.setAttribute('data', '0'));
+  filteredMenus.forEach(menu => menu.setAttribute('data', '0'));
 };
+
+/*Dropdown Menus*/
+const dropMenus = [...document.getElementsByClassName('select')];
+
+dropMenus.forEach(menu => menu.addEventListener('click', ({ target }) => {
+  const filteredMenus = dropMenus.filter(menu => 
+    menu.parentElement.getAttribute('key') !== target.parentElement.getAttribute('key')
+  );
+  const options = [...target.parentElement.children[1].children[0].children];
+
+  if (target.parentElement.getAttribute('data') === '0'){
+    target.parentElement.setAttribute('data', '1');
+    filteredMenus.forEach(menu => menu.parentElement.setAttribute('data', '0'));
+    options.forEach(option => option.addEventListener('click', handleOptionClick = () => {
+      target.children[0].innerHTML = option.innerHTML;
+      target.parentElement.setAttribute('data', '0');
+    }))
+  } else {
+    target.parentElement.setAttribute('data', '0');
+    options.forEach(option => option.removeEventListener('click', handleOptionClick))
+  }
+}));

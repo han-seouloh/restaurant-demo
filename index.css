@@ -7,6 +7,7 @@
 
 :root {
   font-size: 16px;
+  font-family: 'Sweet Sans Pro';
 }
 
 ::-webkit-scrollbar {
@@ -247,15 +248,101 @@ width: 100vw;
   align-items: center;
 }
 
-form {
-  display: flex;
+.form {
+  display: inline-flex;
+  flex-direction: row;
+  align-items: center;
+  margin-top: 25vw;
 }
 
-#inicio select {
-  background-color: rgba(255, 255, 255, 0.75);
-  height: 2.25vw;
+.select {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(255, 255, 255, 0.85);
+  padding: 1.2vw 0;
+  text-align: center;
   font-size: 1vw;
+  width: 10vw;
 }
+
+.select-divider {
+  width: 0.5px;
+  height: 7.5vw;
+  background-color: white;
+}
+
+.select:hover {
+  cursor: pointer;
+}
+
+.select-container[data='1'] .select i{
+  transform: rotate(180deg);
+  transition: transform 0.5s;
+}
+
+.select i{
+  font-size: vw;
+  transition: transform 0.5s;
+  pointer-events: none;
+}
+
+.select p {
+  margin-right: 1vw;
+  pointer-events: none;
+}
+
+.option {
+  width: 10vw;
+  padding: 0.25vw;
+  list-style: none;
+  text-align: center;
+  background-color: rgba(255, 255, 255, 0.85);
+  font-size: 0.8vw;
+}
+
+.option:hover {
+  color: white;
+  background-color: #BB2E2A;
+  cursor: pointer;
+}
+
+.options-container{
+  position: absolute;
+  overflow: hidden;
+}
+
+.form input{
+  border: none;
+  background-color: #BB2E2A;
+  font-family: 'Sweet Sans Pro';
+  font-size: 1vw;
+  padding: 1.2vw 0;
+  width: 10vw;
+  color: white;
+}
+
+.form input:hover {
+  cursor: pointer;
+}
+
+.select-container[data='0'] .options{
+  transform: translateY(-100%);
+  transition: transform 0.5s;
+}
+
+.select-container[data='0'] .option{
+  pointer-events: none;
+}
+
+.select-container[data='1'] .options-container{
+  visibility: visible;
+}
+
+.select-container[data='1'] .options{
+  animation: slideIn 0.5s ease-in;
+}
+
 
 /*Animations*/
 
@@ -278,5 +365,15 @@ form {
   }
   100% {
     transform: translateX(0);
+  }
+}
+
+@keyframes slideIn {
+  0% {
+    transform: translateY(-100%);
+  }
+
+  100% {
+    transform: translateY(0);
   }
 }

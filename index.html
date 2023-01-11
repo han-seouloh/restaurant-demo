@@ -7,6 +7,10 @@
   <link rel="stylesheet" href="./index.css">
   <link rel="stylesheet" href="./fonts/fonts.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/fontawesome.min.css" integrity="sha512-giQeaPns4lQTBMRpOOHsYnGw1tGVzbAIHUyHRgn7+6FmiEgGGjaG0T2LZJmAPMzRCl+Cug0ItQ2xDZpTmEc+CQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/regular.min.css" integrity="sha512-k2UAKyvfA7Xd/6FrOv5SG4Qr9h4p2oaeshXF99WO3zIpCsgTJ3YZELDK0gHdlJE5ls+Mbd5HL50b458z3meB/Q==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/solid.min.css" integrity="sha512-6mc0R607di/biCutMUtU9K7NtNewiGQzrvWX4bWTeqmljZdJrwYvKJtnhgR+Ryvj+NRJ8+NnnCM/biGqMe/iRA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
   <title>señora tanaka</title>
 </head>
 <body>
@@ -25,33 +29,73 @@
   </header>
   <main>
     <section id="inicio">
-      <form>
-        <select name="branch" id="branch-selection">
-          <option value="" disabled selected>SUCURSAL</option>
-          <option value="1">SUCURSAL 1</option>
-          <option value="2">SUCURSAL 2</option>
-          <option value="3">SUCURSAL 3</option>
-        </select>
-        <select name="people" id="people-selection">
-          <option value="" disabled selected>CANT. PERSONAS</option>
-          <option value="1">1 PERSONA</option>
-          <option value="2">2 PERSONAS</option>
-          <option value="3">3 PERSONAS</option>
-        </select>
-        <select name="date" id="date-selection">
-          <option value="" disabled selected>FECHA</option>
-          <option value="1">1-ENE-2023</option>
-          <option value="2">1-FEB-2023</option>
-          <option value="3">1-MAR-2023</option>
-        </select>
-        <select name="time" id="time-selection">
-          <option value="" disabled selected>HORA</option>
-          <option value="1">1-ENE-2023</option>
-          <option value="2">1-FEB-2023</option>
-          <option value="3">1-MAR-2023</option>
-        </select>
-        <input type="submit" value="BUSCAR MESA">
-      </form>
+      <div class="form">
+        <div class="select-container" data="0" key="1">
+          <div class="select" tabindex="0">
+            <p>SUCURSAL</p>
+            <i class='fa-solid fa-chevron-down'></i>
+          </div>
+          <div class="options-container">
+            <ul class="options">
+              <li class="option">SUCURSAL 1</li>
+              <li class="option">SUCURSAL 2</li>
+              <li class="option">SUCURSAL 3</li>
+              <li class="option">SUCURSAL 4</li>
+              <li class="option">SUCURSAL 5</li>
+            </ul>
+          </div>
+        </div>
+        <div class="select-divider"></div>
+        <div class="select-container" data="0" key="2">
+          <div class="select" tabindex="0">
+            <p>PERSONAS</p>
+            <i class='fa-solid fa-chevron-down'></i>
+          </div>
+          <div class="options-container">
+            <ul class="options">
+              <li class="option">1 PERSONA</li>
+              <li class="option">2 PERSONAS</li>
+              <li class="option">3 PERSONAS</li>
+              <li class="option">4 PERSONAS</li>
+              <li class="option">5 PERSONAS</li>
+            </ul>
+          </div>
+        </div>
+        <div class="select-divider"></div>
+        <div class="select-container" data="0" key="3">
+          <div class="select" tabindex="0">
+            <p>FECHA</p>
+            <i class='fa-solid fa-chevron-down'></i>
+          </div>
+          <div class="options-container">
+            <ul class="options">
+              <li class="option">1-ENE-2023</li>
+              <li class="option">28-FEB-2023</li>
+              <li class="option">10-MAR-2023</li>
+              <li class="option">20-ABR-2023</li>
+              <li class="option">31-MAY-2023</li>
+            </ul>
+          </div>
+        </div>
+        <div class="select-divider"></div>
+        <div class="select-container" data="0" key="4">
+          <div class="select" tabindex="0">
+            <p>HORA</p>
+            <i class='fa-solid fa-chevron-down'></i>
+          </div>
+          <div class="options-container">
+            <ul class="options">
+              <li class="option">0:00 AM</li>
+              <li class="option">11:30 AM</li>
+              <li class="option">3:30 PM</li>
+              <li class="option">6:35 PM</li>
+              <li class="option">10:11 PM</li>
+            </ul>
+          </div>
+        </div>
+        <div class="select-divider"></div>
+        <input type="submit" value="BUSCAR MESA" onclick="window.location.reload()">
+      </div>
     </section>
   </main>
   <div class="menu-button">
