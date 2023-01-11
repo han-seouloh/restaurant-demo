@@ -2,7 +2,6 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-
 }
 
 :root {
@@ -361,12 +360,20 @@ width: 100vw;
 
 #nosotros h1 {
   margin-bottom: 3vw;
+  opacity: 0;
+  transition: opacity 0.75s;
 }
 
 #nosotros p {
   width: 40%;
   margin-bottom: 1vw;
   font-weight: lighter;
+  opacity: 0;
+  transition: opacity 2s;
+}
+
+.show-about {
+  opacity: 1 !important;
 }
 
 /*Animations*/

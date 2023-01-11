@@ -90,6 +90,7 @@ dropMenus.forEach(menu => menu.addEventListener('click', ({ target }) => {
   );
   const options = [...target.parentElement.children[1].children[0].children];
 
+
   if (target.parentElement.getAttribute('data') === '0'){
     target.parentElement.setAttribute('data', '1');
     filteredMenus.forEach(menu => menu.parentElement.setAttribute('data', '0'));
@@ -102,3 +103,17 @@ dropMenus.forEach(menu => menu.addEventListener('click', ({ target }) => {
     options.forEach(option => option.removeEventListener('click', handleOptionClick))
   }
 }));
+
+/*About Scroll Animation*/
+const aboutSection = document.getElementById('nosotros');
+
+const aboutObserver = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    [...entry.target.children].forEach(element => element.classList.toggle('show-about'));
+  });
+},{
+  threshold: [0.33],
+  rootMargin: '-25%'
+});
+
+aboutObserver.observe(aboutSection);
