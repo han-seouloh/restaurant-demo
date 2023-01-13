@@ -121,3 +121,47 @@ const aboutObserver = new IntersectionObserver(entries => {
 });
 
 aboutObserver.observe(aboutSection);
+
+/*Image Gallery 1*/
+const galleryContainer = document.getElementsByClassName('gallery-container')[0];
+
+const galleryObserver = new IntersectionObserver(entry => {
+  if (entry[0].isIntersecting) {
+    entry[0].target.setAttribute('data', '1');
+  } else {
+    entry[0].target.setAttribute('data', '0');
+  }
+},{
+  threshold: 0.75
+});
+
+galleryObserver.observe(galleryContainer)
+
+
+const leftGalleryIcon = document.getElementById('prev-icon');
+const rightGalleryIcon = document.getElementById('next-icon');
+
+const handleGalleryClick = () => {
+  const images = [...document.getElementsByClassName('img-container')[0].children];
+  images.forEach( image => {
+    if (parseInt(image.dataset.order) <= 0) {
+      image.dataset.order = 4;
+    } else {
+      image.dataset.order -= 1;
+    };
+  });
+};
+
+const handleReverseGalleryClick = () => {
+  const images = [...document.getElementsByClassName('img-container')[0].children];
+  images.forEach( image => {
+    if (parseInt(image.dataset.order) >= 4) {
+      image.dataset.order = 0;
+    } else {
+      image.dataset.order = parseInt(image.dataset.order) + 1;
+    };
+  });
+};
+
+leftGalleryIcon.addEventListener('click', handleGalleryClick);
+rightGalleryIcon.addEventListener('click', handleReverseGalleryClick);

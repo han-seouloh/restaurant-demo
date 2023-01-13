@@ -7,9 +7,6 @@
   <link rel="stylesheet" href="./index.css">
   <link rel="stylesheet" href="./fonts/fonts.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/fontawesome.min.css" integrity="sha512-giQeaPns4lQTBMRpOOHsYnGw1tGVzbAIHUyHRgn7+6FmiEgGGjaG0T2LZJmAPMzRCl+Cug0ItQ2xDZpTmEc+CQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/regular.min.css" integrity="sha512-k2UAKyvfA7Xd/6FrOv5SG4Qr9h4p2oaeshXF99WO3zIpCsgTJ3YZELDK0gHdlJE5ls+Mbd5HL50b458z3meB/Q==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/solid.min.css" integrity="sha512-6mc0R607di/biCutMUtU9K7NtNewiGQzrvWX4bWTeqmljZdJrwYvKJtnhgR+Ryvj+NRJ8+NnnCM/biGqMe/iRA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
   <title>señora tanaka</title>
 </head>
@@ -109,7 +106,57 @@
         COCINA Y ARQUITECTURA HACIA UNA FIGURA FEMENINA CON EL TAGLINE: "FUTURE IS FEMALE"
       </p>
     </section>
-    <section class="galeria" style="width: 100vw; height: 150vh; background-color: red;"></section>
+    <section id="galeria">
+      <div class="gray-background">
+        <div class="gallery-container">
+          <div class="controller-icons">
+            <i id='prev-icon' class="fa-solid fa-chevron-left"></i>
+            <i id='next-icon' class='fa-solid fa-chevron-right'></i>
+          </div>
+          <div class="img-container">
+            <img src="./images/Galeria-1.png" alt="gallery 1" data-order="0">
+            <img src="./images/Galeria-2.png" alt="gallery 2" data-order="1">
+            <img src="./images/Galeria-3.png" alt="gallery 3" data-order="2">
+            <img src="./images/Galeria-4.png" alt="gallery 4" data-order="3">
+            <img src="./images/Galeria-5.png" alt="gallery 5" data-order="4">
+          </div>
+        </div>
+        <span>
+          HOMENAJE Y RESPUESTA A SU PADRE SEÑOR TANAKA HEREDANDO
+          LA AFICIÓN A LA COCINA Y AL ROCK CON UN TOQUE MÁS CARNÍVORO
+        </span>
+        <input type="submit" value="RESERVAR" />
+        <div class="sucursales">
+          <h2>SUCURSALES</h2>
+          <div class="sucursal-container">
+            <img src="./images/Sucursal-Arboleda.png" alt="sucursal arboleda">
+            <div class="info-sucursal">
+              <h3>ARBOLEDA</h3>
+              <p>
+                AV. DEL ROBLE 660-L-102, VALLE DEL CAMPESTRE, <br>
+                66265 SAN PEDRO GARZA GARCÍA, N.L.
+              </p>
+            </div>
+            <input type="submit" value="RESERVAR">
+          </div>
+          <div class="sucursal-container">
+            <img src="./images/Sucursal-Masaryk.png" alt="sucursal masaryk">
+            <div class="info-sucursal">
+              <h3>MASARYK</h3>
+              <p>
+                AV. PDTE. MASARYK 169, POLANCO, MIGUEL<br>
+                HIDALGO, 11560 CIUDAD DE MÉXICO, CDMX
+              </p>
+            </div>
+            <input type="submit" value="RESERVAR">
+          </div>
+        </div>
+      </div>
+    </section>
+    <div class="gray-divider">
+      <div class="gray-background"></div>
+    </div>
+    
   </main>
   <div class="menu-button">
     <i class="fa-solid fa-chevron-left"></i>
