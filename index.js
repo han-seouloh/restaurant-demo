@@ -163,5 +163,5 @@ const handleReverseGalleryClick = () => {
   });
 };
 
-leftGalleryIcon.addEventListener('click', handleGalleryClick);
-rightGalleryIcon.addEventListener('click', handleReverseGalleryClick);
+leftGalleryIcon.addEventListener('click', handleReverseGalleryClick);
+rightGalleryIcon.addEventListener('click', handleGalleryClick);
