@@ -163,5 +163,23 @@ const handleReverseGalleryClick = () => {
   });
 };
 
-leftGalleryIcon.addEventListener('click', handleReverseGalleryClick);
 rightGalleryIcon.addEventListener('click', handleGalleryClick);
+leftGalleryIcon.addEventListener('click', handleReverseGalleryClick);
+
+/*Image SlideShow */
+
+const slideContainers = [...document.getElementsByClassName('img-slide')];
+
+const slideAnimation = () => {
+  slideContainers.forEach( container => {
+    if (parseInt(container.dataset.order) >= 2) {
+      container.dataset.order = 0;
+    } else {
+      container.dataset.order = parseInt(container.dataset.order) + 1;
+    };
+  });
+};
+
+slideAnimation();
+
+setInterval(slideAnimation, 20000);
