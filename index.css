@@ -602,6 +602,18 @@ div.gray-background {
   justify-content: center;
 }
 
+.blog-container * {
+  outline: 2px solid red;
+}
+
+.blog-container {
+  display: flex;
+}
+
+.blog-img-container img {
+  width: 30vw;
+}
+
 
 /*Blog Gallery*/
 .img-slider {
@@ -609,6 +621,8 @@ div.gray-background {
   justify-content: center;
   width: 100vw;
   height: 25vw;
+  position: relative;
+  overflow: hidden;
 }
 
 .img-slide {
