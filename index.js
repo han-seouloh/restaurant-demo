@@ -166,6 +166,67 @@ const handleReverseGalleryClick = () => {
 rightGalleryIcon.addEventListener('click', handleGalleryClick);
 leftGalleryIcon.addEventListener('click', handleReverseGalleryClick);
 
+/*Blog Slider */
+const blogSlideShow = document.getElementsByClassName('blog-slide-container')[0];
+const blogContainers = [...document.getElementsByClassName('blog-container')];
+const firstBlog = blogContainers[0];
+const lastBlog = blogContainers[blogContainers.length - 1];
+const prevBlog = document.getElementById('prev-blog');
+const nextBlog = document.getElementById('next-blog');
+
+const blogObserver = new IntersectionObserver( entry => {
+  if (entry[0].isIntersecting) {
+    [...entry[0].target.children][0].dataset.visibility = 1;
+  } else {
+    if (scrollDir === 'down') {
+      [...entry[0].target.children][0].dataset.visibility = 2;
+    } else {
+      [...entry[0].target.children][0].dataset.visibility = 0;
+    };
+  }
+},{
+  threshold: 0.4
+});
+
+blogObserver.observe(blogSlideShow);
+
+const handlePrevBlog = () => {
+  blogContainers.forEach( blog => {
+    if (parseInt(blog.dataset.order) >= 2) {
+      blog.dataset.order = 0;
+    } else {
+      blog.dataset.order = parseInt(blog.dataset.order) + 1;
+    }
+  });
+  if (parseInt(firstBlog.dataset.order) === 0) {
+    prevBlog.dataset.visibility = 0;
+    nextBlog.dataset.visibility = 1;
+  } else {
+    prevBlog.dataset.visibility = 1;
+    nextBlog.dataset.visibility = 1;
+  };
+};
+
+const handleNextBlog = () => {
+  blogContainers.forEach( blog => {
+    if (parseInt(blog.dataset.order) <= 0) {
+      blog.dataset.order = 2;
+    } else {
+      blog.dataset.order = parseInt(blog.dataset.order) - 1;
+    }
+  });
+  if (parseInt(lastBlog.dataset.order) === 0) {
+    prevBlog.dataset.visibility = 1;
+    nextBlog.dataset.visibility = 0;
+  } else {
+    prevBlog.dataset.visibility = 1;
+    nextBlog.dataset.visibility = 1;
+  };
+};
+
+prevBlog.addEventListener('click', handlePrevBlog);
+nextBlog.addEventListener('click', handleNextBlog);
+
 /*Image SlideShow */
 
 const slideContainers = [...document.getElementsByClassName('img-slide')];
