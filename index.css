@@ -235,9 +235,12 @@ img.icon {
 }
 
 /*Main Body*/
+main[data-visibility = '0'] {
+  display: none;
+}
 
-main {
-width: 100vw;
+main[data-visibility = '1'] {
+  width: 100vw;
 }
 
 /*Inicio (Dropdown Form)*/

@@ -30,6 +30,24 @@ const onScroll = () => {
 
 window.addEventListener("scroll", onScroll);
 
+/*Switch Between Pages*/
+const eventButton = document.querySelectorAll("a[href='#eventos']");
+const mainButton = document.querySelectorAll("a[href='#inicio']");
+const main = [...document.getElementsByTagName('main')];
+
+const handleMainButton = () => {
+  main[0].dataset.visibility = 1;
+  main[1].dataset.visibility = 0;
+};
+
+const handleEventButton = () => {
+  main[0].dataset.visibility = 0;
+  main[1].dataset.visibility = 1;
+};
+
+eventButton[0].addEventListener('click', handleEventButton);
+mainButton[0].addEventListener('click', handleMainButton);
+
 /*Cities Menu Buttons*/
 const menuButton = document.getElementsByClassName('menu-button')[0];
 const citiesMenu = document.getElementById('menu');
