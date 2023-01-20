@@ -22,19 +22,19 @@ main#eventos {
   color: white;
   font-weight: 300;
   font-size: 0.8vw;
-  animation: pulsation 2s ease-in-out infinite;
+  animation: pulsation 3s ease-in-out infinite;
 }
 
 /*Animations*/
 
 @keyframes pulsation {
   0% {
-    opacity: 0.5;
+    opacity: 0;
   }
   50% {
     opacity: 1;
   }
   100% {
-    opacity: 0.5;
+    opacity: 0;
   }
 }
