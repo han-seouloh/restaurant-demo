@@ -754,8 +754,8 @@ p#leer-mas:hover {
   right: 13%;
   display: flex;
   outline: 0.5vw solid white;
-  transition-delay: 2s;
-  transition: transform 2s, opacity 1s;
+  transition-delay: 1s;
+  transition: transform 1.5s, opacity 1s;
 }
 
 .img-background img {
@@ -865,6 +865,95 @@ p#leer-mas:hover {
 .subscription input[type='submit']:hover {
   outline: 1px solid black;
   cursor: pointer;
+}
+
+/*Footer */
+footer {
+  background-color: black;
+  padding: 5%;
+  padding-bottom: 2.5vw;
+}
+
+.footer-menu-container {
+  border-bottom: 2px solid white;
+  position: relative;
+  padding-bottom: 3vw;
+}
+
+.footer-icons-container {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+.footer-menu {
+  display: inline-flex;
+  width: 37.5%;
+  justify-content: space-between;
+}
+
+.footer-menu img {
+  width: 17.5vw;
+}
+
+.footer-menu a {
+  text-decoration: none;
+  list-style: none;
+  color: white;
+  font-size: 0.8vw;
+}
+
+.footer-menu a:hover {
+  color: var(--main-red);
+}
+
+.footer-menu li {
+  margin-bottom: 0.5vw;
+}
+
+.copyright {
+  display: inline-flex;
+  margin-top: 2vw;
+}
+
+.copyright img{
+  width: 10vw;
+  margin-right: 5vw;
+}
+
+.copyright p {
+  color: white;
+  font-size: .9vw;
+}
+
+.copyright ul {
+  display: inline-flex;
+}
+
+.copyright a {
+  color: var(--main-light-gray);
+  list-style: none;
+  text-decoration: none;
+  font-weight: 300;
+  font-size: 0.75vw;
+  display: flex;
+}
+
+.copyright a:hover {
+  color: white;
+}
+
+.copyright a::after {
+  content: '|';
+  margin: 0 0.25vw;
+}
+
+.copyright a:hover::after {
+  color: var(--main-light-gray);
+}
+
+.copyright a:last-of-type::after {
+  content: '';
 }
 
 /*Animations*/
