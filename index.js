@@ -31,8 +31,13 @@ const onScroll = () => {
 window.addEventListener("scroll", onScroll);
 
 /*Switch Between Pages*/
-const eventButton = document.querySelectorAll("a[href='#eventos']");
-const mainButton = document.querySelectorAll("a[href='#inicio']");
+const jobsButton = document.querySelectorAll("a[href='#bolsa']");
+const eventButton = document.querySelector("a[href='#eventos']");
+const mainButton = document.querySelector("a[href='#inicio']");
+const aboutButton = document.querySelector("a[href='#nosotros']");
+const galleryButton = document.querySelector("a[href='#galeria']");
+const blogButton = document.querySelector("a[href='#blog']");
+
 const main = [...document.getElementsByTagName('main')];
 
 const handleMainButton = () => {
@@ -45,8 +50,13 @@ const handleEventButton = () => {
   main[1].dataset.visibility = 1;
 };
 
-eventButton[0].addEventListener('click', handleEventButton);
-mainButton[0].addEventListener('click', handleMainButton);
+jobsButton[0].addEventListener('click', handleEventButton);
+jobsButton[1].addEventListener('click', handleEventButton);
+eventButton.addEventListener('click', handleEventButton);
+mainButton.addEventListener('click', handleMainButton);
+aboutButton.addEventListener('click', handleMainButton);
+galleryButton.addEventListener('click', handleMainButton);
+blogButton.addEventListener('click', handleMainButton);
 
 /*Cities Menu Buttons*/
 const menuButton = document.getElementsByClassName('menu-button')[0];

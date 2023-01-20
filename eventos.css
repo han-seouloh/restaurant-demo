@@ -1,4 +1,12 @@
 /*Eventos*/
+main#eventos {
+  background-color: black;
+}
+
+[data-visibility = '1'] .main-banner {
+    animation: fadeIn 1s ease-in-out;
+}
+
 .main-banner {
   width: 100vw;
   height: 100vh;
@@ -14,4 +22,19 @@
   color: white;
   font-weight: 300;
   font-size: 0.8vw;
+  animation: pulsation 2s ease-in-out infinite;
+}
+
+/*Animations*/
+
+@keyframes pulsation {
+  0% {
+    opacity: 0.5;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0.5;
+  }
 }
