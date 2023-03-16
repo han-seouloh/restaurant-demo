@@ -269,6 +269,14 @@ const slideAnimation = () => {
   });
 };
 
-slideAnimation();
+slideContainers.forEach( container => {
+  container.addEventListener('transitionend', ({target}) => {  
+    if (parseInt(target.dataset.order) >= 2) {
+      target.dataset.order = 0;
+    } else {
+      target.dataset.order = parseInt(target.dataset.order) + 1;
+    };
+  });
+});
 
-setInterval(slideAnimation, 20000);
+slideAnimation();
